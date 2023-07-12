@@ -1,0 +1,27 @@
+<div class="container_favoritos">
+    <div class="container_nav_favoritos">
+        <h1>Lista de Favoritos</h1>
+        <button class="btn btn-primary" (click)="volverAlListado()">
+            <mat-icon>keyboard_backspace</mat-icon>
+            Volver
+        </button>
+    </div>
+    
+    <div class="demo-section">
+        <button class="btn btn-danger btn_favorite"
+            [matBadge]="totalObrasFavoritas" matBadgePosition="before" matBadgeColor="accent">
+            <mat-icon>favorite</mat-icon>
+            Total Obras Favoritas
+        </button>
+    </div>
+
+    <div *ngFor="let obra of obrasFavoritas" class="container_favorite">
+        <div class="favorite_info">
+            {{ obra.title }} - <strong>{{ obra.author }} </strong>
+        </div>
+        <button mat-raised-button color="warn" (click)="eliminarFavoritos(obra.title)">
+            <mat-icon>delete_outline</mat-icon>
+            Eliminar
+        </button>
+    </div>
+</div>

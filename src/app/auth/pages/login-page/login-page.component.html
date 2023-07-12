@@ -1,0 +1,22 @@
+<div class="container_form">
+    <h2>BIENVENIDOS</h2>
+    <form class="example-form" [formGroup]="formularioLogin" autocomplete="off">
+      <div class="mb-3">
+        <label for="usuario" class="form-label">Usuario</label>
+        <input formControlName="usuario" type="text" class="form-control" id="usuario" placeholder="usuario">
+        <span *ngIf="campoNoValido('usuario')" class="text-form">
+          {{ validarCampoUsuario }}
+        </span>
+      </div>
+      
+      <div class="mb-3">
+        <label for="contrasenia" class="form-label">Contraseña</label>
+        <input formControlName="contrasenia" type="password" class="form-control" id="contrasenia" placeholder="contraseña">
+        <span *ngIf="campoNoValido('contrasenia')" class="text-form">
+          {{ validarCampoContrasenia }}
+        </span>
+      </div>
+
+      <button class="btn btn-primary" (click)="inciarSesion()">Iniciar Sesión</button>
+      </form>
+</div>

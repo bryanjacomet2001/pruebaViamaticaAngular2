@@ -1,0 +1,32 @@
+h2 { padding-left: 2rem;  color: #fff;}
+
+.contianer_nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    background: #16222A;
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A); 
+    background: linear-gradient(to right, #3A6073, #16222A);
+}
+
+.container_spinner{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_nav_btn{
+    display: flex;
+    gap: 1rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}

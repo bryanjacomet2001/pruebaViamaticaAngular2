@@ -1,0 +1,27 @@
+.container_favoritos{
+    padding: 2rem;
+}
+
+.container_favorite{
+    max-width: 1000px;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container_nav_favoritos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

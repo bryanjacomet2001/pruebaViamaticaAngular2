@@ -1,0 +1,30 @@
+<div *ngIf="!obras || !obrasRandom" class="container_spinner">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div class="modal_container">
+    <div class="container_btn_close">
+        <div>
+            <button mat-mini-fab color="warn" (click)="closeDialog()">
+              <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="container_obras_ramdon">
+         <div *ngFor="let obra of obrasRandom" class="card_obras_random">
+             <div class="obras_random_info">
+                 <h2>{{ obra.author }}</h2>
+                 <small> {{ obra.title }} </small>
+             </div>
+             <button class="btn btn-danger btn_add_favorite" (click)="agregarObrasFavoritos(obra)">
+                <mat-icon>favorite</mat-icon>
+                Añadir favoritos
+             </button>
+         </div>
+    </div>
+    <div class="container_obras_authors">
+        <h1>{{ autor }}</h1>
+        <h2>obras</h2>
+        <ul> <li *ngFor="let obra of obras">{{ obra.title }}</li> </ul>
+   </div>
+ </div>
